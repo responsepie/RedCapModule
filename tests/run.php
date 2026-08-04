@@ -39,7 +39,9 @@ namespace {
     $integrity = 'sha384-' . str_repeat('A', 64);
     $tests = [];
 
-    $tests['valid generated embed line'] = function () use ($module, $valid, $expected) {
+    // This exercises the documented contract, not output captured from the
+    // production generator. A redacted production fixture remains a staging test.
+    $tests['valid embed contract example'] = function () use ($module, $valid, $expected) {
         assertSame($expected, $module->render($valid));
     };
 
