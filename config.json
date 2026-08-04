@@ -2,21 +2,23 @@
   "name": "ResponsePie for REDCap",
   "namespace": "Ossillate\\ResponsePieRedcap",
   "framework-version": 14,
-  "description": "Loads ResponsePie on every public REDCap survey page in an enabled project using the one-line JavaScript embed code supplied by ResponsePie.",
+  "description": "Loads a validated ResponsePie script on REDCap survey pages in an enabled project.",
   "documentation": "README.md",
   "authors": [
     {
-      "name": "Ossillate, Inc."
+      "name": "Ossillate, Inc.",
+      "email": "support@example.invalid"
     }
   ],
   "compatibility": {
-    "redcap-version-min": "10.0.0",
+    "redcap-version-min": "13.7.0",
+    "redcap-version-min-lts": "13.7.3",
     "php-version-min": "7.2"
   },
   "project-settings": [
     {
       "key": "rp-embed-code",
-      "name": "ResponsePie one-line JavaScript embed code",
+      "name": "Complete ResponsePie one-line JavaScript embed code (including the project-specific data-study-token)",
       "type": "textarea",
       "required": true
     }
