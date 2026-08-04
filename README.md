@@ -16,14 +16,8 @@ REDCap records, the REDCap database, or the REDCap API.
 
 ## Embed-code contract
 
-ResponsePie supplies a complete, project-specific, one-line script element:
-
-```html
-<script src="https://studies.surveyproctor.com/static/take-redcap/example-study.js" data-study-token="example-study-token" integrity="sha384-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" crossorigin="anonymous"></script>
-```
-
-The researcher pastes that complete generated line into the module setting.
-Do not copy the example value above into a real project. The
+ResponsePie supplies a complete, project-specific, one-line script element.
+The researcher pastes that complete generated line into the module setting. The
 `data-study-token` is a browser-visible, limited-scope study identifier needed
 by the client script; it is not a password, API key, or other secret
 credential. Nevertheless, use only the token generated for the intended
@@ -130,9 +124,15 @@ php tests/run.php
 unzip -Z1 dist/response_pie_redcap_v0.1.0.zip
 ```
 
+The production generator's exact output was not available while preparing this
+prerelease, so no generated embed line has been copied into this repository or
+represented as production output. Matching a real ResponsePie-generated line,
+with its token redacted before recording any test fixture, remains a required
+staging test before production use.
+
 ## Support
 
-The manifest uses the reserved placeholder `support@example.invalid` until
-Ossillate publishes its official support address. Replace it with the official
-support email before a production release; do not send support requests to the
-placeholder.
+No official ResponsePie support address could be verified from the repository
+configuration while preparing this prerelease, so the manifest omits the email
+property rather than publishing a placeholder. Add a verified official support
+address before production use or submission to the REDCap Repo.
